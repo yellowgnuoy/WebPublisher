@@ -26,9 +26,9 @@ body {
   padding: 0;
 }
 h2 {
-  font-size: 3vw;
+  font-size: 2vw;
   font-family: "Pretendard";
-  font-weight: 300;
+  font-weight: 200;
   color: rgb(159, 159, 159);
   text-align: center;
   transition: 2s;
@@ -156,8 +156,8 @@ button {
   background-color: #101010;
 }
 .skill {
-  padding-bottom: 18vw;
-  padding-top: 20vw;
+  padding-bottom: 20vw;
+  padding-top: 14vw;
   color: #101010;
   font-size: 4.8vw;
   font-family: "GangwonEduPowerExtraBoldA";
@@ -166,14 +166,16 @@ button {
   background: linear-gradient(to bottom, #f2f2f2 0%, #d3fa09 100%);
 }
 .skilltext {
-  text-align: left;
+  text-align: center;
   font-size: 1.2vw;
   font-family: "Pretendard";
-  font-weight: 400;
-  line-height: 2.3vw;
-  color: #101010;
+  font-weight: 300;
+  line-height: 2.4vw;
+  color: #4a4a4a;
   padding: 2vw;
-  margin-left: 2vw;
+  margin-left: auto; /* 좌우 가운데 정렬을 위해 추가 */
+  margin-right: auto; /* 좌우 가운데 정렬을 위해 추가 */
+  width: 90%;
 }
 .work {
   margin-bottom: 100vh;
@@ -218,7 +220,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 1.5em;
+  margin: 0 2vw;
 }
 
 .skilllist {
@@ -228,13 +230,13 @@ button {
 
 .skill ul {
   margin-top: 4vw;
-  margin-bottom: 1vw;
+  /* margin-bottom: 1vw; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
   /* border: 1px solid red; */
-  width: 70%;
+  width: 60%;
 }
 
 .skill ul li {
@@ -243,18 +245,17 @@ button {
   text-align: center;
   font-size: 1.3vw;
   font-family: "Pretendard";
-  font-weight: 400;
+  font-weight: 300;
   color: white;
 }
-
 .opbox {
   margin-top: 2vw;
   margin-left: 14vw;
-  height: 13vw;
+  height: 23vw;
   border-radius: 2vw;
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
+  width: 60%;
   background-color: rgb(255, 255, 255, 0.3);
   border: 1px solid rgb(255, 255, 255, 0.7);
 }
@@ -271,7 +272,8 @@ button {
 }
 
 h4 {
-  font-size: 19vw;
+  font-size: 16vw;
+  font-weight: 200;
   font-family: "GangwonEduPowerExtraBoldA";
   color: #101010;
   text-align: center;
@@ -289,10 +291,10 @@ h6 {
   width: 100%;
   position: absolute;
   text-align: center;
-  margin-top: 44vw;
-  font-size: 3vw;
+  margin-top: 26vw;
+  font-size: 2vw;
   font-family: "Pretendard";
-  line-height: 4.6vw;
+  line-height: 3vw;
   font-weight: 300;
   color: rgb(185, 185, 185);
   /* border: 1px solid red; */
@@ -566,7 +568,7 @@ a.btn4 span.btn4Ani {
 
 .slide_item:nth-child(1) {
   background-color: #101010;
-  background-image: url("./img/01.png");
+  background-image: url("./img/03.png");
   background-size: 100%;
   background-repeat: no-repeat;
   transition: background-size 0.3s ease-in-out, opacity 0.5s ease-in-out;
@@ -581,7 +583,7 @@ a.btn4 span.btn4Ani {
 
 .slide_item:nth-child(2) {
   background-color: #101010;
-  background-image: url("./img/02.png");
+  background-image: url("./img/04.png");
   background-size: 100%;
   background-repeat: no-repeat;
   transition: background-size 0.3s ease-in-out, opacity 0.5s ease-in-out;
@@ -595,7 +597,7 @@ a.btn4 span.btn4Ani {
 }
 .slide_item:nth-child(3) {
   background-color: #101010;
-  background-image: url("./img/03.png");
+  background-image: url("./img/02.png");
   background-size: 100%;
   background-repeat: no-repeat;
   transition: background-size 0.3s ease-in-out, opacity 0.5s ease-in-out;
@@ -609,7 +611,7 @@ a.btn4 span.btn4Ani {
 }
 .slide_item:nth-child(4) {
   background-color: #101010;
-  background-image: url("./img/04.png");
+  background-image: url("./img/01.png");
   background-size: 100%;
   background-repeat: no-repeat;
   transition: background-size 0.3s ease-in-out, opacity 0.5s ease-in-out;
