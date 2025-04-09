@@ -1,30 +1,35 @@
 const SEC = 0.5;
+const INIT_DELAY = 600;
 
 function clipText(dom) {
-    dom.classList.remove('on'); // 애니메이션 클래스 제거
-    void dom.offsetWidth; // 리플로우 강제
-    dom.classList.add('on'); // 애니메이션 클래스 추가
+  dom.classList.remove("on");
+  void dom.offsetWidth; // 강제 리플로우
+  dom.classList.add("on");
 }
 
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting && !entry.target.animationInProgress) {
-            entry.target.animationInProgress = true;
-            const h3Tag = entry.target;
+const targets = document.querySelectorAll(".introduction h3");
 
-            // index를 이용하여 딜레이를 설정합니다.
-            setTimeout(() => {
-                clipText(h3Tag);
-                setTimeout(() => {
-                    entry.target.animationInProgress = false;
-                }, SEC * 1000);
-            }, h3Tag.index * SEC * 1000);
-        }
-    });
+function animateSequentially() {
+  targets.forEach((target, index) => {
+    setTimeout(() => {
+      clipText(target);
+    }, INIT_DELAY + index * SEC * 1000);
+  });
+}
+
+let lastAnimated = 0;
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const now = Date.now();
+      // 최근 실행한 이후 1.5초 지나야 재실행
+      if (now - lastAnimated > 1500) {
+        animateSequentially();
+        lastAnimated = now;
+      }
+    }
+  });
 });
 
-const targets = document.querySelectorAll('.introduction h3');
-targets.forEach((target, index) => {
-    target.index = index; // 각 태그에 인덱스를 저장합니다.
-    observer.observe(target);
-});
+targets.forEach((target) => observer.observe(target));

@@ -1,8 +1,15 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
-
+@import url("https://fastly.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.1/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css");
 @font-face {
   font-family: "GangwonEduPowerExtraBoldA";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NEXON Lv1 Gothic OTF";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff")
     format("woff");
   font-weight: normal;
   font-style: normal;
@@ -26,18 +33,34 @@ body {
   padding: 0;
 }
 h2 {
-  font-size: 2vw;
+  margin-top: 4vw;
+  font-size: 1.4vw;
   font-family: "Pretendard";
   font-weight: 200;
   color: rgb(159, 159, 159);
-  text-align: center;
-  transition: 2s;
-  margin: 17.7vw 0 0 0;
+  /* transition: 2s; */
+}
+.blur_cousor {
+  box-shadow: 0 0 15px rgba(255, 103, 27, 0.2);
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(255, 103, 27, 0.3);
+  backdrop-filter: blur(2px);
+  background: rgba(255, 255, 255, 0.05);
+  position: fixed;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  /* z-index: 1; */
+  width: 60px;
+  pointer-events: none;
+  cursor: none;
+  transform: translate(-50%, -50%);
 }
 #maintext {
-  font-family: "GangwonEduPowerExtraBoldA";
-  font-size: 9vw;
-  border-bottom: 1px solid #d3fa09;
+  margin: 1vw;
+  font-family: "NEXON Lv1 Gothic OTF";
+  font-weight: 900;
+  font-size: 7vw;
+  border-bottom: 1px solid #ff9f22;
   color: white;
   position: relative;
   left: 0;
@@ -45,23 +68,22 @@ h2 {
 }
 
 #maintext2 {
-  font-family: "GangwonEduPowerExtraBoldA";
-  font-size: 9vw;
-  border-bottom: 1px solid #d3fa09;
+  font-family: "NEXON Lv1 Gothic OTF";
+  font-weight: 900;
+  font-size: 7vw;
+  border-bottom: 1px solid #ff671b;
   color: white;
   position: relative;
   right: 0;
   transition: left 0.5s ease-out;
 }
 h3 {
-  margin-left: 4vw;
+  margin-left: 3vw;
   justify-content: center;
-  font-size: 4.6vw;
-  /* font-family: 'Pretendard'; */
   color: #101010;
   text-align: left;
   border-bottom: 1px solid #101010;
-  font-family: "GangwonEduPowerExtraBoldA";
+  font-family: "NEXON Lv1 Gothic OTF";
 }
 header {
   display: none;
@@ -72,7 +94,7 @@ header {
   border: 1px solid rgba(211, 250, 9, 0.3);
   border-radius: 100px;
   height: 4vw;
-  background-color: #d3fa09;
+  background-color: #ff9f22;
   text-align: center;
   left: 0;
   right: 0;
@@ -95,12 +117,12 @@ button {
   border-radius: 100px;
   margin-top: 2.2vw;
   position: fixed;
-  background-color: #d3fa09;
+  background-color: #ff9f22;
   right: 6vw;
 }
 
 .ulcolor {
-  /* color: #D3FA09; */
+  /* color: #ff9f22; */
   justify-content: center;
   font-size: 1.3vw;
   font-family: "Pretendard";
@@ -115,16 +137,47 @@ button {
   display: inline;
 }
 .main {
-  height: 100vh;
+  text-align: center;
+  margin-top: 20vw;
+  height: 70vh;
   border: 1px solid rgba(10, 10, 10, 0);
 }
 .introduction {
+  margin-left: 3vw;
   position: relative;
-  align-items: center;
-  display: flex;
   width: 100%;
-  height: 100vh;
-  margin-bottom: 10vw;
+  height: 120vh;
+}
+
+.introduction-title {
+  display: flex;
+  position: sticky;
+  top: 20vw;
+}
+
+.introduction h3 {
+  font-size: 3.4vw;
+  font-weight: 900;
+  color: #101010;
+}
+
+.scroll-fill-text {
+  top: 14%;
+  width: 80%;
+  font-size: 1.6vw;
+  font-family: "Pretendard";
+  /* color: #101010; */
+  white-space: pre-wrap;
+  padding: 3vw 10vw;
+  line-height: 1.4vw;
+  color: lightgray;
+}
+.char {
+  transition: color 0.2s;
+}
+
+.char.filled {
+  color: #101010;
 }
 .me01 {
   margin: -2vw 0 0 7vw;
@@ -156,22 +209,23 @@ button {
   background-color: #101010;
 }
 .skill {
-  padding-bottom: 20vw;
-  padding-top: 14vw;
+  padding-bottom: 30vw;
+  padding-top: 50vw;
   color: #101010;
   font-size: 4.8vw;
-  font-family: "GangwonEduPowerExtraBoldA";
+  font-family: "NEXON Lv1 Gothic OTF";
+  font-weight: 900;
   text-align: center;
   /* border: 1px solid rgb(10, 10, 10); */
-  background: linear-gradient(to bottom, #f2f2f2 0%, #d3fa09 100%);
+  background: linear-gradient(to bottom, #f2f2f2 30%, #ff671b 70%);
 }
 .skilltext {
   text-align: center;
-  font-size: 1.2vw;
+  font-size: 1.4vw;
   font-family: "Pretendard";
   font-weight: 300;
   line-height: 2.4vw;
-  color: #4a4a4a;
+  color: #101010;
   padding: 2vw;
   margin-left: auto; /* 좌우 가운데 정렬을 위해 추가 */
   margin-right: auto; /* 좌우 가운데 정렬을 위해 추가 */
@@ -179,11 +233,7 @@ button {
 }
 .work {
   margin-bottom: 100vh;
-  background: linear-gradient(
-    to bottom,
-    rgba(211, 250, 9, 1),
-    rgba(242, 242, 242, 0)
-  );
+  background: linear-gradient(to bottom, #ff671b, rgba(242, 242, 242, 0));
 }
 .work-content {
   display: flex;
@@ -191,15 +241,16 @@ button {
   justify-content: center;
   overflow: visible;
   transition: all 0.5s ease-in-out;
-  height: 50vw;
+  height: 40vw;
   font-size: 4.8vw;
-  font-family: "GangwonEduPowerExtraBoldA";
+  font-family: "NEXON Lv1 Gothic OTF";
+  font-weight: 900;
   text-align: center;
   color: white;
   background-color: #101010;
   border-radius: 3vw;
-  padding-top: 8vw;
-  padding-bottom: 10vw;
+  /* padding-top: 8vw;
+  padding-bottom: 10vw; */
 }
 .gaji {
   bottom: 0;
@@ -211,7 +262,10 @@ button {
   margin: -4vw auto 0;
   width: 14vw;
 }
-
+.arrow {
+  font-size: 1vw;
+  margin: 0.7vw 2vw 0 0;
+}
 .box1 {
   flex: 1;
   height: 3.6vw;
@@ -222,7 +276,54 @@ button {
   align-items: center;
   margin: 0 2vw;
 }
+.accordion-container {
+  padding-top: 4vw;
+  width: 80%;
+  margin: 0 auto;
+  font-family: "NEXON Lv1 Gothic OTF";
+}
 
+.accordion-header {
+  width: 100%;
+  padding: 2vw 0;
+  font-size: 2vw;
+  text-align: left;
+  border: none;
+  border-bottom: 1px solid rgba(14, 14, 14, 0.5);
+  background: none;
+  cursor: pointer;
+  transition: color 0.3s;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  color: rgba(14, 14, 14, 0.5);
+}
+
+.accordion-header:hover {
+  color: #101010;
+  border-bottom: 1px solid #101010;
+}
+
+.accordion-content {
+  display: none;
+  font-family: "Pretendard";
+  font-weight: 300;
+  font-size: 1.4vw;
+  max-height: 0;
+  overflow: hidden;
+  line-height: 1.6;
+  color: #101010;
+  transition: max-height 0.3s ease, padding 0.3s;
+}
+
+.accordion-item.active .accordion-content {
+  display: block;
+  padding: 1rem 0;
+  max-height: 500px; /* 충분히 큰 값으로 설정 */
+}
+.accordion-item.active .arrow {
+  transform: rotate(180deg); /* ▼ → ▲ */
+}
 .skilllist {
   display: flex;
   justify-content: center;
@@ -272,12 +373,12 @@ button {
 }
 
 h4 {
-  font-size: 16vw;
-  font-weight: 200;
-  font-family: "GangwonEduPowerExtraBoldA";
+  font-size: 14vw;
+  font-family: "NEXON Lv1 Gothic OTF";
+  font-weight: 900;
   color: #101010;
   text-align: center;
-  line-height: 17vw;
+  line-height: 14vw;
   padding-top: 4vw;
 }
 h5 {
@@ -288,10 +389,11 @@ h5 {
   color: rgb(185, 185, 185);
 }
 h6 {
-  width: 100%;
+  width: 94%;
   position: absolute;
-  text-align: center;
-  margin-top: 26vw;
+  text-align: right;
+  margin-right: 10vw;
+  margin-top: 36vw;
   font-size: 2vw;
   font-family: "Pretendard";
   line-height: 3vw;
@@ -300,8 +402,8 @@ h6 {
   /* border: 1px solid red; */
 }
 #h6black {
-  color: #101010;
-  font-weight: 300;
+  color: #999999;
+  font-weight: 500;
 }
 #black {
   color: #101010;
@@ -331,7 +433,7 @@ h6 {
 
 .line {
   width: 90%;
-  border: solid 1px black;
+  border: solid 1px #101010;
   text-align: center;
 }
 
@@ -407,28 +509,29 @@ a {
   font-size: 1.3vw;
   font-family: "Pretendard";
   font-weight: 400;
-  display: block;
+  display: flex;
   position: relative;
-  width: 16vw;
-  height: 3.6vw;
-  justify-items: center;
+  width: 8vw;
+  height: 8vw;
+  justify-content: center; /* 가운데 정렬 */
+  align-items: center; /* 수직 가운데 정렬 */
   text-align: center;
   text-decoration: none;
   color: inherit;
   overflow: hidden;
-  background-color: rgb(227, 227, 227);
-  border: 1px solid rgb(166, 166, 166);
+  /* background-color: rgb(227, 227, 227); */
+  border: 1px solid rgb(201, 201, 201);
   z-index: 1; /* 추가 */
   transition: color 0.5s ease;
-  line-height: 3.6vw;
+  /* line-height: 3.6vw; */
 }
 a:hover {
-  color: #d3fa09;
+  color: #ff9f22;
 }
 
 a.btn2 {
   overflow: hidden;
-  margin: 8vw;
+  margin-top: 9vw;
   border-radius: 100px;
 }
 
@@ -444,7 +547,7 @@ a.btn2 span {
 
 a.btn2 span.btn2Ani {
   animation: btn2Ani 0.2s linear 1;
-  transform: scale(30, 30);
+  transform: scale(20, 20);
 }
 
 @keyframes btn2Ani {
@@ -452,13 +555,13 @@ a.btn2 span.btn2Ani {
     transform: scale(1, 1);
   }
   100% {
-    transform: scale(30, 30);
+    transform: scale(20, 20);
   }
 }
 
 a.btn3 {
   overflow: hidden;
-  margin: 8vw;
+  margin-top: 9vw;
   border-radius: 100px;
 }
 a.btn3 span {
@@ -472,19 +575,19 @@ a.btn3 span {
 }
 a.btn3 span.btn3Ani {
   animation: btn3Ani 0.3s linear 1;
-  transform: scale(30, 30);
+  transform: scale(20, 20);
 }
 @keyframes btn3Ani {
   0% {
     transform: scale(1, 1);
   }
   100% {
-    transform: scale(30, 30);
+    transform: scale(20, 20);
   }
 }
 a.btn4 {
   overflow: hidden;
-  margin: 8vw;
+  margin-top: 9vw;
   border-radius: 100px;
 }
 a.btn4 span {
@@ -498,14 +601,14 @@ a.btn4 span {
 }
 a.btn4 span.btn4Ani {
   animation: btn4Ani 0.3s linear 1;
-  transform: scale(30, 30);
+  transform: scale(20, 20);
 }
 @keyframes btn4Ani {
   0% {
     transform: scale(1, 1);
   }
   100% {
-    transform: scale(30, 30);
+    transform: scale(20, 20);
   }
 }
 .flexbtn {
@@ -516,12 +619,17 @@ a.btn4 span.btn4Ani {
 }
 .h5flex {
   display: flex;
+  width: 60%;
+  justify-content: space-between;
+}
+.h5flex2 {
+  display: flex;
   width: 90%;
   margin-bottom: 3vw;
   justify-content: space-between;
 }
 .slide {
-  margin-top: 2vw;
+  border-radius: 3vw;
   font-size: 3vw;
   font-family: "Pretendard";
   font-weight: 300;
@@ -534,16 +642,17 @@ a.btn4 span.btn4Ani {
   user-select: none;
 }
 .slide_item {
+  border-radius: 3vw;
+  height: 40vw;
   font-family: "Pretendard";
   font-weight: 600;
-  font-size: 4vw;
+  font-size: 3vw;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   left: 0px;
   width: 100%;
-  height: 30vw;
   flex-shrink: 0;
   transition: left 0.15s;
 }
@@ -635,7 +744,7 @@ li {
   display: flex;
   gap: 5px;
   position: absolute;
-  bottom: 0;
+  margin-top: 2vw;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -653,17 +762,17 @@ li {
   font-weight: 400;
   text-align: center;
   position: absolute;
-  margin-top: -12vw;
+  margin-top: -10vw;
   border-bottom: 1px solid white;
   /* border: 1px solid red; */
 }
 .protext2 {
-  font-size: 1.3vw;
+  font-size: 1.1vw;
   font-family: "Pretendard";
   font-weight: 400;
-  line-height: 3vw;
+  line-height: 1.8vw;
   text-align: center;
   position: absolute;
-  margin-top: 12vw;
+  margin-top: 10vw;
   opacity: 0.3;
 }
